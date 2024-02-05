@@ -36,7 +36,8 @@
 }
 
 .multiples-row {
-    justify-content: flex-start;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
     position: absolute;
     bottom: 4px;
     left: 4px;

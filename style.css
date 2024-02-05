@@ -1,7 +1,7 @@
 #grid {
     display: grid;
     grid-template-columns: repeat(10, 60px);
-    gap: 2px;
+    gap: 0px;
 }
 
 .grid-item {
@@ -63,3 +63,26 @@
     font-weight: bold;
     color: red;
 }
+
+/* Odd Rows: Grey-White Pattern */
+.grid-item:nth-child(20n+1), .grid-item:nth-child(20n+3), .grid-item:nth-child(20n+5),
+.grid-item:nth-child(20n+7), .grid-item:nth-child(20n+9) {
+    background-color: #949599; /* Odd items in odd rows */
+}
+
+.grid-item:nth-child(20n+2), .grid-item:nth-child(20n+4), .grid-item:nth-child(20n+6),
+.grid-item:nth-child(20n+8), .grid-item:nth-child(20n+10) {
+    background-color: #F8E10E; /* Even items in odd rows */
+}
+
+/* Even Rows: White-#grey Pattern */
+.grid-item:nth-child(20n+11), .grid-item:nth-child(20n+13), .grid-item:nth-child(20n+15),
+.grid-item:nth-child(20n+17), .grid-item:nth-child(20n+19) {
+    background-color: #F8E10E; /* Odd items in even rows */
+}
+
+.grid-item:nth-child(20n+12), .grid-item:nth-child(20n+14), .grid-item:nth-child(20n+16),
+.grid-item:nth-child(20n+18), .grid-item:nth-child(20n+20) {
+    background-color: #949599; /* Even items in even rows */
+}
+

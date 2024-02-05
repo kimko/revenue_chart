@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (j <= 7) {
         // For the column: 2nd to 7th multiples
         const multiple = document.createElement("div");
-        if (j === 7) {
+        if (j === 6) {
           multiple.classList.add("bold-red");
         }
         multiple.textContent = i * j;

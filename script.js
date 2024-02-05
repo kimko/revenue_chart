@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const multiple = document.createElement('div');
                 multiple.textContent = i * j;
                 columnContainer.appendChild(multiple);
+
+                if (j === 4) {
+                    const line = document.createElement('div');
+                    line.classList.add('horizontal-line');
+                    columnContainer.appendChild(line);
+                }
             } else { // For the row: 8th to 9h multiples
                 if (j === 8) { // Initialize row container the first time
                     const rowContainer = document.createElement('div');

@@ -49,3 +49,10 @@
     font-size: 10px;
     padding-right: 4px;
 }
+
+.horizontal-line {
+    border-top: 1px solid black; /* Creates a horizontal line */
+    width: 33%; /* Limits the line to the left third of the square */
+    margin: 2px 0; /* Adds a little space above and below the line */
+    align-self: flex-end; /* Aligns the line to the left side */
+}

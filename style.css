@@ -19,6 +19,7 @@
 
 .grid-item>.value {
     font-weight: bold;
+    font-size: 20px;
     margin-bottom: 2px;
 }
 
@@ -55,4 +56,9 @@
     width: 33%; /* Limits the line to the left third of the square */
     margin: 2px 0; /* Adds a little space above and below the line */
     align-self: flex-end; /* Aligns the line to the left side */
+}
+
+.bold-red {
+    font-weight: bold;
+    color: red;
 }

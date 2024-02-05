@@ -18,8 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Append multiples starting with the second, within the column
         for (let j = 2; j <= 9; j++) {
+
             if (j <= 7) { // For the column: 2nd to 7th multiples
                 const multiple = document.createElement('div');
+                if (j === 7) {
+                    multiple.classList.add('bold-red');
+                }
                 multiple.textContent = i * j;
                 columnContainer.appendChild(multiple);
 

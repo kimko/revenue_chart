@@ -20,17 +20,30 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let j = 2; j <= 9; j++) {
       if (j <= 7) {
         // For the column: 2nd to 7th multiples
-        const multiple = document.createElement("div");
-        if (j === 6) {
-          multiple.classList.add("bold-red");
-        }
-        multiple.textContent = i * j;
-        columnContainer.appendChild(multiple);
+        const multipleContainer = document.createElement("div");
+        multipleContainer.classList.add("multiple-container");
+
+        const xLabel = document.createElement("div");
+        xLabel.textContent = `× ${j} =`;
+        xLabel.classList.add("multiple-label");
+        multipleContainer.appendChild(xLabel);
+
+        const multiplication = document.createElement("div");
+        multiplication.innerHTML = padWithNonBreakingSpaces(i * j, 3);
+
+        multiplication.classList.add("multiple-value");
+        multipleContainer.appendChild(multiplication);
+
+        columnContainer.appendChild(multipleContainer);
 
         if (j === 4) {
           const line = document.createElement("div");
           line.classList.add("horizontal-line");
           columnContainer.appendChild(line);
+        }
+
+        if (j === 6) {
+          multipleContainer.classList.add("bold-red");
         }
       } else {
         // For the row: 8th to 9h multiples
@@ -50,3 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
     gridContainer.appendChild(gridItem);
   }
 });
+
+function padWithNonBreakingSpaces(number, length) {
+  let numberString = number.toString();
+  while (numberString.length < length) {
+      numberString = '\u00A0' + numberString; // Unicode for non-breaking space
+  }
+  return numberString;
+}

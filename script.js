@@ -18,44 +18,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Append multiples starting with the second, within the column
     for (let j = 2; j <= 9; j++) {
-      if (j <= 7) {
-        // For the column: 2nd to 7th multiples
-        const multipleContainer = document.createElement("div");
-        multipleContainer.classList.add("multiple-container");
+      // For the column: 2nd to 7th multiples
+      const multipleContainer = document.createElement("div");
+      multipleContainer.classList.add("multiple-container");
 
-        const xLabel = document.createElement("div");
-        xLabel.textContent = `× ${j} =`;
-        xLabel.classList.add("multiple-label");
-        multipleContainer.appendChild(xLabel);
+      const xLabel = document.createElement("div");
+      xLabel.textContent = `× ${j} =`;
+      xLabel.classList.add("multiple-label");
+      multipleContainer.appendChild(xLabel);
 
-        const multiplication = document.createElement("div");
-        multiplication.innerHTML = padWithNonBreakingSpaces(i * j, 3);
+      const multiplication = document.createElement("div");
+      multiplication.innerHTML = padWithNonBreakingSpaces(i * j, 3);
 
-        multiplication.classList.add("multiple-value");
-        multipleContainer.appendChild(multiplication);
+      multiplication.classList.add("multiple-value");
+      multipleContainer.appendChild(multiplication);
 
-        columnContainer.appendChild(multipleContainer);
+      columnContainer.appendChild(multipleContainer);
 
-        if (j === 4) {
-          const line = document.createElement("div");
-          line.classList.add("horizontal-line");
-          columnContainer.appendChild(line);
-        }
+      if (j === 5) {
+        const line = document.createElement("div");
+        line.classList.add("horizontal-line");
+        columnContainer.appendChild(line);
+      }
 
-        if (j === 6) {
-          multipleContainer.classList.add("bold-red");
-        }
-      } else {
-        // For the row: 8th to 9h multiples
-        if (j === 8) {
-          // Initialize row container the first time
-          const rowContainer = document.createElement("div");
-          rowContainer.classList.add("multiples-row");
-          gridItem.appendChild(rowContainer);
-        }
-        const rowMultiple = document.createElement("span");
-        rowMultiple.textContent = i * j;
-        gridItem.lastChild.appendChild(rowMultiple);
+      if (j === 6) {
+        multipleContainer.classList.add("bold-red");
       }
     }
 

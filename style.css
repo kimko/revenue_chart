@@ -30,6 +30,12 @@
     justify-content: flex-start; /* This aligns items to the start of the container */
 }
 
+.row-multiple-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+}
+
 .multiples-column,
 .multiples-row {
     width: 100%;
@@ -49,6 +55,7 @@
     position: absolute;
     bottom: 4px;
     left: 4px;
+    padding-top: 4px;
 }
 
 .multiple-label {
@@ -87,21 +94,21 @@
 /* Odd Rows: Grey-White Pattern */
 .grid-item:nth-child(20n+1), .grid-item:nth-child(20n+3), .grid-item:nth-child(20n+5),
 .grid-item:nth-child(20n+7), .grid-item:nth-child(20n+9) {
-    background-color: #CCCCCC; /* Odd items in odd rows */
+    background-color: #D3D3D3; /* Odd items in odd rows */
 }
 
 .grid-item:nth-child(20n+2), .grid-item:nth-child(20n+4), .grid-item:nth-child(20n+6),
 .grid-item:nth-child(20n+8), .grid-item:nth-child(20n+10) {
-    background-color: #F8E10E; /* Even items in odd rows */
+    background-color: #FFE4B5; /* Even items in odd rows */
 }
 
 /* Even Rows: White-#grey Pattern */
 .grid-item:nth-child(20n+11), .grid-item:nth-child(20n+13), .grid-item:nth-child(20n+15),
 .grid-item:nth-child(20n+17), .grid-item:nth-child(20n+19) {
-    background-color: #F8E10E; /* Odd items in even rows */
+    background-color: #FFE4B5; /* Odd items in even rows */
 }
 
 .grid-item:nth-child(20n+12), .grid-item:nth-child(20n+14), .grid-item:nth-child(20n+16),
 .grid-item:nth-child(20n+18), .grid-item:nth-child(20n+20) {
-    background-color: #CCCCCC; /* Even items in even rows */
+    background-color: #D3D3D3; /* Even items in even rows */
 }

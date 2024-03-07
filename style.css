@@ -12,7 +12,7 @@
     border: 1px solid black;
     height: 110px;
     position: relative;
-    padding: 4px;
+    padding: 5px;
     font-size: 12px;
     overflow: hidden;
     font-family: 'Courier New', monospace;
@@ -20,8 +20,7 @@
 
 .grid-item>.value {
     font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 2px;
+    font-size: 18px;
 }
 
 .multiple-container {
@@ -59,13 +58,13 @@
 }
 
 .multiple-label {
-    font-size: 9px; /* Adjust the font size as needed */
+    font-size: 8px; /* Adjust the font size as needed */
     letter-spacing: -2px;
     padding-right: 4px;
 }
 
 .multiple-value {
-    font-size: 9px; /* Adjust the font size as needed */
+    font-size: 10px; /* Adjust the font size as needed */
     font-weight: bold;
 }
 
